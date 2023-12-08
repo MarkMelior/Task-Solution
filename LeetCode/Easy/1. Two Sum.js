@@ -26,8 +26,8 @@
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
 
 // * Hash Set
-// * Runtime 57 ms
-// * Memory 43.9 MB
+// * Runtime 51 ms (Beats 90.22% of users with JavaScript)
+// * Memory 43.02 MB (Beats 32.22%of users with JavaScript)
 function twoSum(nums, target) {
 	const set = new Set()
 
