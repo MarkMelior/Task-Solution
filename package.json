@@ -1,0 +1,21 @@
+{
+	"name": "task-solution",
+	"version": "1.0.0",
+	"description": "CodeWars  \r [![CodeWars user MarkMelior](https://www.codewars.com/users/MarkMelior/badges/small)](https://www.codewars.com/users/MarkMelior)",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "npx mocha index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"chai": "^4.3.10",
+		"mocha": "^10.2.0",
+		"module-alias": "^2.2.3"
+	},
+	"_moduleAliases": {
+		"@root": "."
+	}
+}

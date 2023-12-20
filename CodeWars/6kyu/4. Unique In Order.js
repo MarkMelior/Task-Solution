@@ -8,10 +8,6 @@
 
 // * O(n)
 var uniqueInOrder = function (iterable) {
-	if (!Array.isArray(iterable)) {
-		iterable = iterable.split('')
-	}
-
 	const result = []
 
 	for (let i = 0; i < iterable.length; i++) {
@@ -23,5 +19,12 @@ var uniqueInOrder = function (iterable) {
 	return result
 }
 
-console.log(uniqueInOrder([1, 2, 2, 3, 3]))
-console.log(uniqueInOrder('AAAABBBCCDAABBB'))
+import { assert } from 'chai'
+
+describe('uniqueInOrder', function () {
+	it('Убирает повторяющиеся друг за другом символы', function () {
+		assert.deepEqual(uniqueInOrder([1, 2, 2, 3, 3]), [1, 2, 3])
+		assert.deepEqual(uniqueInOrder('AAAABBBCCDAABBB'),
+		['A', 'B', 'C', 'D', 'A', 'B']) // prettier-ignore
+	})
+})

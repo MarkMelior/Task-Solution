@@ -15,6 +15,7 @@
 // The number of nodes in the tree is in the range [0, 104].
 // -100 <= Node.val <= 100
 
+const { assert } = require('chai')
 const { arrayToBinaryTree } = require('./arrayToBinaryTree')
 
 // * Runtime 66 ms Beats 19.35%
@@ -33,8 +34,18 @@ function maxDepth(root) {
 const maxDepth = root =>
 	root === null ? 0 : Math.max(maxDepth(root.left), maxDepth(root.right)) + 1
 
-console.log(maxDepth(arrayToBinaryTree([3, 9, 20, null, null, 15, 7]))) // 3
-console.log(maxDepth(arrayToBinaryTree([1, null, 2]))) // 2
+// console.log(maxDepth(arrayToBinaryTree([3, 9, 20, null, null, 15, 7]))) // 3
+// console.log(maxDepth(arrayToBinaryTree([1, null, 2]))) // 2
+
+describe('maxDepth', () => {
+	it('It`s working!', () => {
+		assert.equal(
+			maxDepth(arrayToBinaryTree([3, 9, 20, null, null, 15, 7])),
+			3
+		)
+		assert.equal(maxDepth(arrayToBinaryTree([1, null, 2])), 2)
+	})
+})
 
 // * My first work with binary tree. Its don't work XD
 // let answer = 0
