@@ -6,6 +6,8 @@
 // uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 // uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
+const { assert } = require('chai')
+
 // * O(n)
 var uniqueInOrder = function (iterable) {
 	const result = []
@@ -18,8 +20,6 @@ var uniqueInOrder = function (iterable) {
 
 	return result
 }
-
-import { assert } from 'chai'
 
 describe('uniqueInOrder', function () {
 	it('Убирает повторяющиеся друг за другом символы', function () {
